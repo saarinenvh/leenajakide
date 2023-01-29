@@ -1,0 +1,219 @@
+h2 {
+    font-family: wedding_bellsregular;
+    font-size: 48px;
+}
+
+p {
+    font-family: raleway;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.hr {
+    height: 119px;
+    margin-bottom: 2rem;
+}
+
+.img-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 60px solid black;
+    box-shadow: inset 3px 3px 10px 0 #000000;
+    box-sizing: border-box;
+}
+
+.padd {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+
+.carousel-item > div {
+    height: 350px!important;
+    width:  350px!important;
+    background-size: cover;
+}
+.carousel-item {
+    height: 350px!important;
+    width:  350px!important;
+}
+
+.carousel-inner {
+    height: 250px!important;
+    width: 300px!important;
+    position: relative;
+}
+.carousel-inner:after {
+    box-shadow: inset 0 0 20rem rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: 1px -1px 21px 4px rgba(0,0,0,0.72) inset;
+    -webkit-box-shadow: 1px -1px 21px 4px rgba(0,0,0,0.72) inset;
+    -moz-box-shadow: 1px -1px 21px 4px rgba(0,0,0,0.72) inset;
+}
+
+@media screen and (max-width: 767px) {
+
+    .desktop {
+        display: none;
+    }
+
+
+    body, html{
+        height:100%;
+      }
+      .swiper-container,
+      .swiper-wrapper,
+      .swiper-slide{
+        width: 100%;
+        height: 100%;
+      }
+       .swiper-slide {
+         text-align: center;
+         font-size: 18px;
+         background: #fff;
+         /* Center slide text vertically */
+         display: flex;
+         justify-content: center;
+         align-items: center;
+        
+      }
+
+      .swiper {
+        height: 100vh;
+      }
+
+      .shadowFlip {
+        box-shadow: -8px 8px 13px -3px rgba(0, 0, 0, 0.57);
+        -webkit-box-shadow: -8px 8px 13px -3px rgba(0, 0, 0, 0.57);
+        -moz-box-shadow: -8px 8px 13px -3px rgba(0, 0, 0, 0.57);
+      }
+
+      .tp-wrapper {
+        margin-top: 56px;
+        height: calc(100vh - 56px);
+        width: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        -webkit-perspective: 800px;
+                perspective: 800px;
+
+      }
+      
+      .tp-box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+        -webkit-transform         : transform 1s;
+            -ms-transform         : transform 1s;
+                transform         : transform 1s;
+      }
+      .tp-box__side {
+         width: 100%;
+        height: 100%;
+        position: absolute;
+  
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+  
+        color: #fff;
+        text-align: center;
+        font-size: 24px;
+
+      }
+      .tp-box__front {
+        aspect-ratio: 4/5;
+        background: none!important;
+        margin: 0!important;
+        background-repeat: no-repeat!important;
+        background-size: contain!important;
+      }
+
+      .tp-box__back {
+        aspect-ratio: 4/5;
+        background: none!important;
+        margin: 0!important;
+        background-repeat: no-repeat!important;
+        background-size: contain!important;
+      }
+
+      .kutsu-mob-front {
+        max-height: 640px;
+        object-fit: contain;
+      }
+
+      .card-bg {
+        background: url('../assets/images/card.png');
+      }
+
+      .tp-box__back {
+
+        height: calc(100vh - 56px);
+        background-size: contain!important;
+        background-repeat: no-repeat!important;
+        -webkit-transform : rotateY(-180deg);
+        -ms-transform     : rotateY(-180deg);
+        transform         : rotateY(-180deg);
+      }
+
+      .tyypitMobile {
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+      }
+
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .login-form h2 {
+        font-size: 40px;
+      }
+
+      .form-item #password {
+        width: 259px;
+    }
+
+      .login-form:after {
+        width: 400px;
+        height: 400px;
+        top: -106px;
+        right: 0;
+        bottom: 0;
+        left: -48px;
+    }
+
+    .nav-link {
+        text-align: center;
+        color: white;
+        font-family: raleway;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 700;
+    }
+
+    
+.custom-bg {
+    background: #000000a8
+}
+
+    .navbar-nav {
+        padding-bottom: 2rem;
+    }
+
+
+
+
+}

@@ -1,0 +1,575 @@
+<div class="login-overlay">
+   <div class="body-content login-comp">
+      <div class="container">
+         <div class="row">
+            <div class="col d-flex justify-content-center align-items-center">
+               <div class="login-form">
+                  <h2>Kirjaudu sisään</h2>
+                  <form action="">
+                     <div class="form-item">
+                        <input type="password" name="password" id="password" [(ngModel)]="password"
+                           (keyup.enter)="checkLogin()" placeholder="Salasana" />
+                        <p id="login" class="login" (click)="checkLogin()">&#10095;</p>
+                     </div>
+                     <div id="invalid" class="form-item">
+                        <p>Väärä salasana</p>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<nav class="navbar navbar-expand-md custom-bg fixed-top navbar-dark px-2" *ngIf="logged">
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+   </button>
+
+   <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+         <li class="nav-item active" id="welcome" (click)="handleNavigation('#welcome')">
+            <a class="nav-link" href="#"><span class="sr-only">Tervetuloa</span></a>
+         </li>
+         <li class="nav-item active" id="party" (click)="handleNavigation('#party')">
+            <a class="nav-link" href="#"><span class="sr-only">Juhlat</span></a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#" id="location" (click)="handleNavigation('#location')">Sijainti</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#" id="dresscode" (click)="handleNavigation('#dresscode')">Pukukoodi</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#" id="info" (click)="handleNavigation('#info')">Infoa</a>
+         </li>
+         <li class="nav-item active" id="rsvp" (click)="handleNavigation('#rsvp')">
+            <a class="nav-link" href="#"><span class="sr-only">R.S.V.P</span></a>
+         </li>
+      </ul>
+   </div>
+</nav>
+
+<main>
+   <div class="desktop">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col">
+
+               <div class="kutsu">
+
+                  <div id="bb-bookblock" class="bb-bookblock">
+                     <div class="bb-item ">
+                        <div class="row one-page">
+                           <div class="col-md-6">
+                              <div class="solo-page-empty"></div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="solo-page-empty"></div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="bb-item">
+                        <div class="row one-page">
+                           <div class="col-md-6">
+                              <div class="solo-page-empty"></div>
+                           </div>
+                           <div class="col-md-6 solo-first">
+                              <div class="solo-page-etu">
+                                 <div class="row h-100">
+                                    <div class="col d-flex justify-content-center align-items-center">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="bb-item ">
+                        <div class="bg-wrapper">
+                           <div class="row h-100">
+
+                              <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                 <img src="../assets/images/party.png" height="350px" />
+                              </div>
+                              <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                 <div class="kutsu-text">
+                                    <h2>Juhlat</h2>
+                                    <img src="../assets/images/hr.png" class="hr" />
+                                    <p>Juhlat järjestetään 8.4.2023 ja alkavat klo 15.00 Järvenpään Seuratalolla -
+                                       Osoitteessa Kartanontie 20,
+                                       04410</p>
+                                    <p>Puolenyön aikaan vaunut muuttuvat kurpitsoiksi ja kestävimmät juhlijat siirtyvät
+                                       jatkamaan iltaa Järvenpään yöelämään.</p>
+                                    <p>Kutsusivua päivitetään talven aikana, joten sivua kannattaa kurkata ennen
+                                       saapumistanne juhlaan.</p>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="bb-item ">
+                        <div class="bg-wrapper">
+                           <div class="row h-100">
+                              <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                 <div class="kutsu-text">
+                                    <h2>Sijainti</h2>
+                                    <img src="../assets/images/hr.png" class="hr" />
+                                    <div class="mapouter">
+                                       <div class="gmap_canvas"><iframe id="gmap_canvas"
+                                             src="https://maps.google.com/maps?q=Kartanontie%2020,%2004410&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                             frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                                             href="https://123movies-to.org"></a><br>
+                                          <style>
+                                             .mapouter {
+                                                position: relative;
+                                                text-align: right;
+                                                max-height: 500px;
+                                                max-width: 500px;
+                                                width: 100%;
+                                                height: 100%;
+                                             }
+
+                                             .mapouter iframe {
+                                                max-height: 596px;
+                                                max-width: 500px;
+                                                /* width: 100%; */
+                                                /* height: 100%; */
+                                                min-height: 369px;
+                                                border: 10px solid #090a30;
+                                                -webkit-filter: grayscale(100%);
+                                                filter: grayscale(100%);
+                                             }
+                                          </style>
+                                          <style>
+                                             .gmap_canvas {
+                                                overflow: hidden;
+                                                background: none !important;
+                                             }
+                                          </style>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                 <img src="../assets/images/info.png" height="350px" />
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="bb-item">
+                        <div class="bg-wrapper">
+                           <div class="row h-100">
+
+                              <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                 <img src="../assets/images/dresscode.png" height="350px" />
+                              </div>
+
+                              <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                 <div class="kutsu-text">
+                                    <h2>Pukukoodi</h2>
+                                    <img src="../assets/images/hr.png" class="hr" />
+                                    <p>Toivomme, että saavutte paikalle sellaisissa keväisen juhlavissa vaatteissa,
+                                       joissa itse
+                                       viihdytte hyvin. </p>
+                                    <p>Juhlapaikkamme Seuratalo edustaa vetoisaa maalaisromantiikkaa,
+                                       joten se
+                                       kannattaa huomioida pukeutumisessa.</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+
+                     <div class="bb-item">
+                        <div class="bg-wrapper">
+                           <div class="row h-100">
+                              <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                 <div class="kutsu-text">
+                                    <h2>Infoa</h2>
+                                    <img src="../assets/images/hr.png" class="hr" />
+                                    <p>Kutsusivua päivitetään talven aikana, joten sivua kannattaa kurkata ennen
+                                       saapumistanne juhlaan.</p>
+                                    <p>Koska meillä on kaikki tarvitsemamme, emme toivo mitään esineitä lahjoiksi.
+                                       Häälahjaksi voi halutessaan antaa lahjoituksen perheenkasvatusprojektiimme:
+                                       tähän tilinumero</p>
+                                    <p>Paras lahja meille on ehdottomasti se, että mahdollisimman moni pääsisi
+                                       juhlistamaan tärkeää päivää kanssamme.</p>
+                                 </div>
+                              </div>
+                              <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                 <img src="../assets/images/arrested.png" height="350px" />
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="bb-item">
+                        <div class="row one-page">
+
+                           <div class="col-md-6 solo-last">
+                              <div class="solo-page padd card-bg">
+                                 <div class="row h-100">
+                                    <div class="col d-flex justify-content-center align-items-center flex-column">
+                                       <h2>R.S.V.P.</h2>
+                                       <img src="../assets/images/hr.png" class="hr" />
+                                       <p>Pyydämme ilmoittamaan osallistumisestanne ja mahdollisista
+                                          erikoisruokavalioista vastaamalla viestiin, jossa linkki hääkutsuun oli.</p>
+
+                                       <p>Yhteystiedot</p>
+                                       <div class="row">
+                                          <div class="col">
+                                             <p>Leena Virta-Wickström<br>0408276825></p>
+                                          </div>
+                                          <div class="col">
+                                             <p>Kristian Wickström<br>0449749566</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="col-md-6">
+                           <div class="solo-page-empty">
+                              <img class="tyypit" src="../assets/gifs/kideleenadance.gif" height="150px" />
+                           </div>
+                        </div>
+                     </div>
+
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- MOBILE INTERFACE -->
+
+   <div class="mobile">
+
+      <swiper [config]="config" (swiper)="onSwiper($event)" (beforeTransitionStart)="onBeforeTransition($event)"
+         #swiperNew>
+
+         <!-- FLIP 1 -->
+         <ng-template swiperSlide>
+            <div class="tp-wrapper">
+               <div id="tp-1" class="tp-box d-flex justify-content-center align-items-center" [@flipState]="flip0">
+                  <div class="tp-box__side tp-box__front ">
+                     <div class="row h-100">
+                        <div class="col-md-6">
+                           <div class="kutsu-text d-flex justify-content-center align-items-center flex-column h-100">
+                              <div class="centered" (click)="toggleFlip(0)">
+                                 <div class="kutsu-text">
+                                    <img src="../assets/images/party.png" height="350px" />
+                                 </div>
+                              </div>
+                              <img class="kutsu-mob-front shadowFlip" src="../assets/images/card_etu_mobile_empty.png"
+                                 (click)="toggleFlip(0)" />
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+
+                  <div class="tp-box__side tp-box__back">
+                     <div class="row h-100">
+                        <div class="col d-flex justify-content-center align-items-center">
+                           <div class="centered">
+                              <img class="kutsu-mob-front shadowFlip" src="../assets/images/card_etu_mobile1.png"
+                                 (click)="toggleFlip(0)" />
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </ng-template>
+
+
+
+         <!-- FLIP 2 -->
+         <ng-template swiperSlide>
+
+            <div class="tp-wrapper">
+               <div id="tp-1" class="tp-box d-flex justify-content-center align-items-center" [@flipState]="flip1">
+                  <div class="tp-box__side tp-box__front ">
+                     <div class="row h-100">
+                        <div class="col-md-6">
+                           <div class="kutsu-text d-flex justify-content-center align-items-center flex-column h-100">
+                              <div class="centered" (click)="toggleFlip(1)">
+                                 <div class="kutsu-text">
+                                    <h2>Juhlat</h2>
+                                    <img src="../assets/images/hr.png" class="hr" />
+                                    <p>Juhlat järjestetään 8.4.2023 ja alkavat klo 15.00 Järvenpään Seuratalolla -
+                                       Osoitteessa Kartanontie 20,
+                                       04410</p>
+                                    <p>Puolenyön aikaan vaunut muuttuvat kurpitsoiksi ja kestävimmät juhlijat siirtyvät
+                                       jatkamaan iltaa Järvenpään yöelämään.</p>
+                                    <p>Kutsusivua päivitetään talven aikana, joten sivua kannattaa kurkata ennen
+                                       saapumistanne juhlaan.</p>
+                                 </div>
+                              </div>
+                              <img class="kutsu-mob-front shadowFlip" src="../assets/images/card_etu_mobile_empty.png"
+                                 (click)="toggleFlip(1)" />
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+
+                  <div class="tp-box__side tp-box__back">
+                     <div class="row h-100">
+                        <div class="col d-flex justify-content-center align-items-center">
+                           <div class="centered" (click)="toggleFlip(1)">
+                              <div class="kutsu-text">
+                                 <img src="../assets/images/party1.png" height="350px" />
+                              </div>
+                           </div>
+                           <img class="kutsu-mob-front shadowFlip" src="../assets/images/card_etu_mobile_empty.png" (click)="toggleFlip(1)" />
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </ng-template>
+
+
+         <!-- FLIP 3 -->
+         <ng-template swiperSlide>
+            <div class="tp-wrapper">
+               <div id="tp-1" class="tp-box d-flex justify-content-center align-items-center" [@flipState]="flip2">
+                  <div class="tp-box__side tp-box__front ">
+                     <div class="row h-100">
+                        <div class="col-md-6">
+                           <div class="kutsu-text d-flex justify-content-center align-items-center flex-column h-100">
+                              <div class="centered" (click)="toggleFlip(2)">
+                                 <div class="kutsu-text">
+                                    <h2>Sijainti</h2>
+                                    <img src="../assets/images/hr.png" class="hr" />
+                                    <div class="mapouter">
+                                       <div class="gmap_canvas"><iframe id="gmap_canvas"
+                                             src="https://maps.google.com/maps?q=Kartanontie%2020,%2004410&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                             frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                                             href="https://123movies-to.org"></a><br>
+                                          <style>
+                                             .mapouter {
+                                                position: relative;
+                                                text-align: right;
+                                                max-height: 500px;
+                                                max-width: 500px;
+                                                width: 100%;
+                                                height: 100%;
+                                             }
+
+                                             .mapouter iframe {
+                                                max-height: 596px;
+                                                max-width: 500px;
+                                                /* width: 100%; */
+                                                /* height: 100%; */
+                                                min-height: 369px;
+                                                border: 10px solid #090a30;
+                                                -webkit-filter: grayscale(100%);
+                                                filter: grayscale(100%);
+                                             }
+                                          </style>
+                                          <style>
+                                             .gmap_canvas {
+                                                overflow: hidden;
+                                                background: none !important;
+                                             }
+                                          </style>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <img class="kutsu-mob-front shadowFlip" src="../assets/images/card_etu_mobile_empty.png"
+                                 (click)="toggleFlip(2)" />
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+                  <div class="tp-box__side tp-box__back">
+                     <div class="row h-100">
+                        <div class="col d-flex justify-content-center align-items-center">
+                           <div class="centered" (click)="toggleFlip(2)">
+                              <div class="kutsu-text">
+                                 <img src="../assets/images/arrested.png" width="350px" height="auto" />
+                              </div>
+                           </div>
+                           <img class="kutsu-mob-front shadowFlip" src="../assets/images/card_etu_mobile_empty.png"
+                              (click)="toggleFlip(2)" />
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+
+         </ng-template>
+
+         <!-- FLIP 4 -->
+         <ng-template swiperSlide>
+            <div class="tp-wrapper">
+               <div id="tp-1" class="tp-box d-flex justify-content-center align-items-center" [@flipState]="flip3">
+                  <div class="tp-box__side tp-box__front ">
+                     <div class="row h-100">
+                        <div class="col-md-6">
+                           <div class="kutsu-text d-flex justify-content-center align-items-center flex-column h-100">
+                              <div class="centered" (click)="toggleFlip(3)">
+                                 <div class="kutsu-text">
+                                    <div class="kutsu-text">
+                                       <h2>Pukukoodi</h2>
+                                       <img src="../assets/images/hr.png" class="hr" />
+                                       <p>Toivomme, että saavutte paikalle sellaisissa keväisen juhlavissa vaatteissa,
+                                          joissa itse
+                                          viihdytte hyvin. </p>
+                                       <p>Juhlapaikkamme Seuratalo edustaa vetoisaa maalaisromantiikkaa,
+                                          joten se
+                                          kannattaa huomioida pukeutumisessa.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <img class="kutsu-mob-front shadowFlip" src="../assets/images/card_etu_mobile_empty.png"
+                                 (click)="toggleFlip(3)" />
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+                  <div class="tp-box__side tp-box__back">
+                     <div class="row h-100">
+                        <div class="col-md-6">
+                           <div class="kutsu-text d-flex justify-content-center align-items-center flex-column h-100">
+                              <div class="centered" (click)="toggleFlip(3)">
+                                 <img src="../assets/images/dresscode.png" height="350px" />
+                              </div>
+                              <img class="kutsu-mob-front shadowFlip" src="../assets/images/card_etu_mobile_empty.png"
+                                 (click)="toggleFlip(3)" />
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+
+         </ng-template>
+
+
+         <!-- FLIP 5 -->
+         <ng-template swiperSlide>
+            <div class="tp-wrapper">
+               <div id="tp-1" class="tp-box d-flex justify-content-center align-items-center" [@flipState]="flip4">
+                  <div class="tp-box__side tp-box__front ">
+                     <div class="row h-100">
+                        <div class="col-md-6">
+                           <div class="kutsu-text d-flex justify-content-center align-items-center flex-column h-100">
+                              <div class="centered" (click)="toggleFlip(4)">
+                                 <div class="kutsu-text">
+                                    <h2>Infoa</h2>
+                                    <img src="../assets/images/hr.png" class="hr" />
+                                    <p>Kutsusivua päivitetään talven aikana, joten sivua kannattaa kurkata ennen
+                                       saapumistanne juhlaan.</p>
+                                    <p>Koska meillä on kaikki tarvitsemamme, emme toivo mitään esineitä lahjoiksi.
+                                       Häälahjaksi voi halutessaan antaa lahjoituksen perheenkasvatusprojektiimme:
+                                       tähän tilinumero</p>
+                                    <p>Paras lahja meille on ehdottomasti se, että mahdollisimman moni pääsisi
+                                       juhlistamaan tärkeää päivää kanssamme.</p>
+                                 </div>
+                              </div>
+                              <img class="kutsu-mob-front shadowFlip" src="../assets/images/card_etu_mobile_empty.png"
+                                 (click)="toggleFlip(4)" />
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+                  <div class="tp-box__side tp-box__back">
+                     <div class="row h-100">
+                        <div class="col-md-6">
+                           <div class="kutsu-text d-flex justify-content-center align-items-center flex-column h-100">
+                              <div class="centered" (click)="toggleFlip(4)">
+                                 <img src="../assets/images/info.png" height="350px" />
+                              </div>
+                              <img class="kutsu-mob-front shadowFlip" src="../assets/images/card_etu_mobile_empty.png"
+                                 (click)="toggleFlip(4)" />
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+
+         </ng-template>
+
+         <!-- FLIP 6 -->
+         <ng-template swiperSlide>
+            <div class="tp-wrapper">
+               <div id="tp-1" class="tp-box d-flex justify-content-center align-items-center" [@flipState]="flip5">
+                  <div class="tp-box__side tp-box__front ">
+                     <div class="row h-100">
+                        <div class="col-md-6">
+                           <div class="kutsu-text d-flex justify-content-center align-items-center flex-column h-100">
+                              <div class="centered" (click)="toggleFlip(5)">
+                                 <div class="kutsu-text">
+                                    <h2>R.S.V.P.</h2>
+                                    <img src="../assets/images/hr.png" class="hr" />
+                                    <p>Pyydämme ilmoittamaan osallistumisestanne ja mahdollisista
+                                       erikoisruokavalioista vastaamalla viestiin, jossa linkki hääkutsuun oli.</p>
+
+                                    <p>Yhteystiedot</p>
+                                    <div class="row">
+                                       <div class="col">
+                                          <p>Leena Virta-Wickström<br>0408276825></p>
+                                       </div>
+                                       <div class="col">
+                                          <p>Kristian Wickström<br>0449749566</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <img class="kutsu-mob-front shadowFlip" src="../assets/images/card_etu_mobile_empty.png"
+                                 (click)="toggleFlip(5)" />
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+                  <div class="tp-box__side tp-box__back">
+                     <div class="row h-100">
+                        <div class="col-md-6">
+                           <div class="kutsu-text d-flex justify-content-center align-items-center flex-column h-100">
+                              <div class="centered" (click)="toggleFlip(5)">
+                                 <img src="../assets/gifs/kideleenadance.gif" height="230px" />
+                              </div>
+                              <img class="kutsu-mob-front shadowFlip" src="../assets/images/card_etu_mobile_empty.png"
+                                 (click)="toggleFlip(5)" />
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+
+         </ng-template>
+      </swiper>
+   </div>
+
+</main>

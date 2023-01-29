@@ -1,0 +1,393 @@
+@font-face {
+    font-family: 'wedding_bellsregular';
+    src: url('assets/fonts/weddingbells/wedding_bells_-_ttf-webfont.woff2') format('woff2'),
+         url('assets/fonts/weddingbells/wedding_bells_-_ttf-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('assets/fonts/raleway/raleway-italic-variablefont_wght-webfont.woff2') format('woff2'),
+         url('assets/fonts/raleway/raleway-italic-variablefont_wght-webfont.woff') format('woff');
+    font-weight: 256;
+    font-style: normal;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    height: 100%;
+    background-size: 100% 100%!important;
+}
+
+.offcanvas-backdrop.show {
+    opacity: 0!important;
+}
+
+.bg-horizontal {
+    background: url('assets/images/bg.png');
+}
+
+.bg-vertical {
+    background: url('assets/images/bg_vertical.png');
+    background-size:cover;
+}
+
+
+.login-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+}
+
+.test {
+    height: 100vh;
+}
+
+/* #curtain {
+    filter: blur(0.001px);
+    width: 100vw;
+    height: 100vh;
+} */
+
+.gifffer-play-button {
+    display: none;
+}
+
+#start {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+button#curtain {
+    position: absolute !important;
+    z-index: 100;
+}
+
+.body-content {
+    position: relative;
+    z-index: 1200;
+}
+
+.container {
+    width: 390px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 15px;
+}
+
+h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.login-form {
+    position: relative;
+}
+
+.login-form h2 {
+    text-align: center;;
+}
+
+.login-form:after {
+    background: url('./assets/images/circle_straight.png');
+    content: "";
+    position: absolute;
+    top: -128px;
+    right: 0;
+    bottom: 0;
+    left: -56px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 450px;
+    z-index: -1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item {
+    margin: 5px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.form-item label {
+    display: block;
+    padding: 2px;
+    font-size: 20px;
+    width: 100px;
+}
+
+.form-item #password {
+    width: 290px;
+    height: 35px;
+    border: none;
+    background: none;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+input#password::placeholder {
+    font-family: raleway;
+    color:#ffffffbf;
+    font-size: 20px;
+}
+
+.login {
+    font-size: 20px;
+    width: 30px;
+    height: 35px;
+    border-bottom: 1px solid white;
+    margin: auto;
+    color: white;
+    background: none;
+    cursor: pointer;
+    text-align: right;
+}
+
+.login:hover {
+    color: black;
+}
+
+.form-btns {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.form-btns button {
+    margin: auto;
+    font-size: 20px;
+    padding: 5px 15px;
+    border: 2px solid;
+    border-radius: 15px;
+    color: white;
+    background: #178cc6;
+    width: 280px;
+    cursor: pointer;
+}
+
+.other-options {
+    margin: auto;
+    display: flex;
+}
+
+.other-options p {
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 5px 45px;
+}
+
+.other-options p:hover {
+    color: rgb(31, 31, 36);
+}
+
+p {
+    text-align: center;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#invalid {
+    display: none;
+}
+
+input#password:focus-visible {
+    outline: none;
+}
+
+.form-item:focus-visible {
+    outline: none !important;
+}
+
+.fade-in-image {
+    animation: fadeIn 5s;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome 16+, Safari 4+ */
+    -moz-animation-fill-mode: forwards;
+    /* FF 5+ */
+    -o-animation-fill-mode: forwards;
+    /* Not implemented yet */
+    -ms-animation-fill-mode: forwards;
+    /* IE 10+ */
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+.tyypit {
+    position: absolute;
+    top: 290px;
+    right: 0;
+    bottom: 0;
+    height: 231px;
+    width: auto;
+}
+
+@keyframes slide-out {
+    0% {
+        -webkit-transform: translateX(0%);
+    }
+
+    50% {
+        -webkit-transform: translateX(-360%);
+    }
+
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+
+
+.desktop {
+    margin: 4rem auto;
+}
+
+.kutsu {
+    position: relative;
+    width: 100%;
+    max-width: 961px;
+    margin: auto;
+    height: 100vh;
+    z-index: 0;
+}
+
+.kutsu .bg-wrapper {
+    background: url('assets/images/card2_new.png');
+    background-size: 100% 100%;
+    height: 90%;
+    margin: 4rem 2rem;
+    box-shadow: -8px 8px 13px -3px rgba(0, 0, 0, 0.57);
+    -webkit-box-shadow: -8px 8px 13px -3px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: -8px 8px 13px -3px rgba(0, 0, 0, 0.57);
+    text-align: center;
+}
+
+#slider {
+    margin-top: 7rem;
+    height: 300px;
+    width: 350px;
+}
+
+#slider {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background: linear-gradient(#828383, #aeafaf, #c5c7e7);
+    -webkit-box-shadow: inset 2px -2px 24px 9px rgba(7, 9, 46, 1);
+    -moz-box-shadow: inset 2px -2px 24px 9px rgba(7, 9, 46, 1);
+    box-shadow: inset 2px -2px 24px 9px rgba(7, 9, 46, 1);
+}
+
+#bb-bookblock {
+    width: 100%;
+    max-width: 1060px;
+    height: 90%;
+}
+
+.bb-content,
+.bb-item {
+    background: none !important;
+}
+
+.custom-bg {
+    background: #0000002b;
+}
+
+.nav-link {
+    text-align: center;
+    color: white;
+    font-family: raleway;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+
+.nav-link {
+    color: white;
+}
+
+.solo-first {
+    padding-left: 0;
+}
+
+.solo-last {
+    padding-right: 0;
+}
+
+.solo-page-etu {
+    background: url('assets/images/card_etu.png');
+    background-size: 100% 100%;
+    height: 90%;
+    margin: 4rem 0;
+    box-shadow: -8px 8px 13px -3px rgba(0, 0, 0, 0.57);
+    -webkit-box-shadow: -8px 8px 13px -3px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: -8px 8px 13px -3px rgba(0, 0, 0, 0.57);
+    text-align: center;
+}
+
+.solo-page {
+    background: url('assets/images/card_empty.png');
+    background-size: 100% 100%;
+    height: 90%;
+    margin: 4rem 0;
+    box-shadow: -8px 8px 13px -3px rgba(0, 0, 0, 0.57);
+    -webkit-box-shadow: -8px 8px 13px -3px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: -8px 8px 13px -3px rgba(0, 0, 0, 0.57);
+    text-align: center;
+}
+
+.solo-page-empty {
+    background: none;
+    height: 90%;
+    margin: 4rem 0;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: white;
+    font-weight: 700;
+}
+
+.one-page {
+    height: 100%;
+}
+
+.kutsu-text {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.hidden {
+    visibility: hidden;
+}
