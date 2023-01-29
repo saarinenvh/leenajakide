@@ -145,6 +145,7 @@ export class AppComponent implements OnInit {
       $(".login-overlay").hide();
       this.logged = true;
       $("#bb-bookblock").bookblock("jump", 2)
+      $("swiper").addClass("visible");
       $(".kutsu-mob-front").first().click();
       setTimeout(function () {
         if (screen.width > 767) {
