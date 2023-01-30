@@ -14,49 +14,9 @@ p {
     margin-bottom: 2rem;
 }
 
-.img-container {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border: 60px solid black;
-    box-shadow: inset 3px 3px 10px 0 #000000;
-    box-sizing: border-box;
-}
-
 .padd {
     padding-left: 2rem;
     padding-right: 2rem;
-}
-
-
-.carousel-item > div {
-    height: 350px!important;
-    width:  350px!important;
-    background-size: cover;
-}
-.carousel-item {
-    height: 350px!important;
-    width:  350px!important;
-}
-
-.carousel-inner {
-    height: 250px!important;
-    width: 300px!important;
-    position: relative;
-}
-.carousel-inner:after {
-    box-shadow: inset 0 0 20rem rgba(0, 0, 0, 1);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    box-shadow: 1px -1px 21px 4px rgba(0,0,0,0.72) inset;
-    -webkit-box-shadow: 1px -1px 21px 4px rgba(0,0,0,0.72) inset;
-    -moz-box-shadow: 1px -1px 21px 4px rgba(0,0,0,0.72) inset;
 }
 
 
@@ -272,6 +232,10 @@ p {
 
   #login {
     font-size: 20px;
+  }
+
+  .comma {
+    line-height: 11px;
   }
 }
 

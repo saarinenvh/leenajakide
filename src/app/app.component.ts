@@ -154,7 +154,6 @@ export class AppComponent implements OnInit {
   }
 
   toggleFlip(number) {
-    console.log(number)
     switch (number) {
       case 0: 
       this.flip0 = (this.flip0 == 'inactive') ? 'active' : 'inactive';
