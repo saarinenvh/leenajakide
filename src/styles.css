@@ -14,6 +14,10 @@
     font-style: normal;
 }
 
+main {
+    display: none;
+}
+
 .mobile {
     display: none;
     overflow: hidden;
@@ -43,7 +47,7 @@ body {
 
 .offcanvas-backdrop.show {
     opacity: 0!important;
-}
+}§
 
 .bg-horizontal {
     background: url('assets/images/web/bg.png');
