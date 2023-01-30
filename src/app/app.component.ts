@@ -142,7 +142,7 @@ export class AppComponent implements OnInit {
 
   public checkLogin() {
     if (this.password === "rakkauttavain") {
-      $("main").show();
+      $("main").removeClass("hidden");
       $(".login-overlay").hide();
       this.logged = true;
       $("#bb-bookblock").bookblock("jump", 2)
