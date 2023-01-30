@@ -141,19 +141,12 @@ export class AppComponent implements OnInit {
   }
 
   public checkLogin() {
-    if (this.password === "test") {
+    if (this.password === "rakkauttavain") {
       $(".login-overlay").hide();
       this.logged = true;
       $("#bb-bookblock").bookblock("jump", 2)
       $("swiper").addClass("visible");
       $(".kutsu-mob-front").first().click();
-      setTimeout(function () {
-        if (screen.width > 767) {
-
-        } else {
-
-        }
-      }, 500);
     } else {
       $("#invalid").show();
     }
@@ -204,8 +197,4 @@ export class AppComponent implements OnInit {
       $(".login-overlay").addClass("bg-horizontal");
     }
   }
-
-
-
-
 }

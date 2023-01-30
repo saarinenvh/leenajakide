@@ -14,6 +14,16 @@
     font-style: normal;
 }
 
+.mobile {
+    display: none;
+    overflow: hidden;
+}
+
+.desktop {
+    display: block;
+    overflow: hidden;
+}
+
 .visible {
     visibility:visible!important;
 }
@@ -41,18 +51,10 @@ body {
 
 .bg-vertical {
     background: url('assets/images/web/bg_vertical.png');
-    background-size:cover;
 }
 
 
-.login-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 100;
-}
+
 
 .test {
     height: 100vh;
@@ -254,24 +256,25 @@ input#password:focus-visible {
 
 .tyypit {
     position: absolute;
-    top: 290px;
     right: 0;
-    bottom: 0;
-    height: 231px;
+    bottom: -10px;
+    height: 112px;
     width: auto;
+    animation: slide-out 120s linear infinite;
 }
+
 
 @keyframes slide-out {
     0% {
-        -webkit-transform: translateX(0%);
+        -webkit-transform: translateX(0);
     }
 
     50% {
-        -webkit-transform: translateX(-360%);
+        -webkit-transform: translateX(-80vw);
     }
 
     100% {
-        -webkit-transform: translateX(0%);
+        -webkit-transform: translateX(0);
     }
 }
 
@@ -282,10 +285,10 @@ input#password:focus-visible {
 
 .kutsu {
     position: relative;
-    width: 100%;
+    width: 85%;
     max-width: 961px;
     margin: auto;
-    height: 100vh;
+    height: 90vh;
     z-index: 0;
 }
 
@@ -397,4 +400,30 @@ input#password:focus-visible {
 
 .hidden {
     visibility: hidden;
+}
+
+@media screen and (min-resolution: 120dpi) { 
+    nav {
+        zoom: 0.66;
+    }
+    
+    .desktop {
+        zoom: 0.66;
+        height: calc(1.4 * 100vh);
+    }
+
+    .kutsu {
+        height: calc(1.4 * 100vh);
+    }
+}
+
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    overflow: hidden;
+    background-size: 100% 100%;
 }

@@ -62,8 +62,18 @@ p {
 
 @media screen and (max-width: 767px) {
 
+  .rsvp1 {
+    width: 250px;
+    height: auto;
+    border: 13px solid #0c0c2e;
+  }
+
     .desktop {
         display: none;
+    }
+
+    .mobile {
+      display: block;
     }
 
 
@@ -99,7 +109,7 @@ p {
 
       .tp-wrapper {
         margin-top: 56px;
-        height: calc(100vh - 56px);
+        height: calc(100vh - 112px);
         width: auto;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -166,10 +176,14 @@ p {
         transform         : rotateY(-180deg);
       }
 
-      .tyypitMobile {
+      .tyypit {
         position: absolute;
+        right: 0;
         bottom: 0;
-        z-index: 10;
+        height: 112px;
+        width: auto;
+        animation: slide-out 50s linear infinite;
+        z-index: 99;
       }
 
       .centered {
@@ -203,6 +217,7 @@ p {
         text-transform: uppercase;
         letter-spacing: 3px;
         font-weight: 700;
+        font-size: 24px;
     }
 
     html {
