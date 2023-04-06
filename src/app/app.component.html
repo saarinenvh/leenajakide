@@ -37,7 +37,7 @@
             <a class="nav-link" href="#"><span class="sr-only">Juhlat</span></a>
          </li>
          <li class="nav-item">
-            <a class="nav-link" href="#" id="location" (click)="handleNavigation('#location')">Sijainti</a>
+            <a class="nav-link" href="#" id="location" (click)="handleNavigation('#location')">Sijainti & Pysäköinti</a>
          </li>
          <li class="nav-item">
             <a class="nav-link" href="#" id="dresscode" (click)="handleNavigation('#dresscode')">Pukukoodi</a>
@@ -157,8 +157,15 @@
                                  </div>
                               </div>
 
-                              <div class="col-md-6 d-flex justify-content-center align-items-center">
-                                 <img src="../assets/images/web/info.png" height="350px" />
+                              <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
+                                 <img src="../assets/images/web/info.png" height="250px" />
+                                 <div class="kutsu-text">
+                              <p>Maksuton 24h pysäköintialue sijaitsee Järvenpään kirjaston takana osoitteessa Valtuustonkatu 4.<br> Pysäköintipaikalta on kävelymatkaa juhlapaikalle n. 100m.
+                                 Lisätietoja ja ohjeita on juhlapäivänä mahdollista tiedustella seremoniamestari Viljami Holopaiselta ja kaaso Martina Hyytiäiseltä.<br><br>
+                                 Viljami 044 271 9026<br>
+                                 Martina 040 773 7287</p>
+                              </div>
+                                 
                               </div>
 
                            </div>
@@ -354,8 +361,8 @@
                               <div class="centered" (click)="toggleFlip(2)">
                                  <div class="kutsu-text">
                                     <h2>Sijainti</h2>
-                                    <img src="../assets/images/web/hr.png" class="hr" />
-                                    <div class="mapouter">
+                                    <img src="../assets/images/web/hr.png" class="hr mb-2" />
+                                    <div class="mapouter mobile-map">
                                        <div class="gmap_canvas"><iframe id="gmap_canvas"
                                              src="https://maps.google.com/maps?q=Kartanontie%2020,%2004410&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
@@ -389,6 +396,7 @@
                                           </style>
                                        </div>
                                     </div>
+                                       <p>Klikkaa tästä nähdäksesi lisätietoa pysäköinnistä.</p>
                                  </div>
                               </div>
                               <img class="kutsu-mob-front shadowFlip" src="../assets/images/web/card_etu_mobile_empty.png"
@@ -403,7 +411,11 @@
                         <div class="col d-flex justify-content-center align-items-center">
                            <div class="centered" (click)="toggleFlip(2)">
                               <div class="kutsu-text">
-                                 <img class="arrested" src="../assets/images/web/arrested.png" width="350px" height="auto" />
+                                    <img class="arrested" src="../assets/images/web/arrested.png" width="auto" height="180px" />
+                                    <p class="p-text">Maksuton 24h pysäköintialue sijaitsee Järvenpään kirjaston takana osoitteessa Valtuustonkatu 4.<br> Pysäköintipaikalta on kävelymatkaa juhlapaikalle n. 100m.
+                                       <br><br>Lisätietoja ja ohjeita on juhlapäivänä mahdollista tiedustella seremoniamestari Viljami Holopaiselta ja kaaso Martina Hyytiäiseltä.<br><br>
+                                       Viljami 044 271 9026<br>
+                                       Martina 040 773 7287</p>
                               </div>
                            </div>
                            <img class="kutsu-mob-front shadowFlip" src="../assets/images/web/card_etu_mobile_empty.png"

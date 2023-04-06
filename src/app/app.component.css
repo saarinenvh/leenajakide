@@ -19,6 +19,10 @@ p {
     padding-right: 2rem;
 }
 
+.mobile-map {
+  margin-bottom: 3rem;
+}
+
 
 @media screen and (max-width: 767px) {
 
@@ -226,7 +230,7 @@ p {
     min-height: 267px!important;
   }
 
-  .arrested {
+  .p-text {
     width: 270px!important;
   }
 
